@@ -1,0 +1,458 @@
+/* Resert */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* marquee */
+.marquee {
+    color: #fff;
+    padding-top: 50px;
+    /* h-shadow | v-shadow | color */
+    text-shadow: 0.2rem 0.2rem red;
+}
+ 
+/* main styling */
+html, body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.7em;
+}
+
+a {
+    color: #333;
+    text-decoration: none;
+}
+
+h1, h2, h3 {
+    padding-bottom: 20px;
+}
+
+p {
+    margin: 10px 0;
+}
+
+/* Utility classes */
+.container {
+    margin: auto;
+    max-width: 1000px;
+    overflow: auto;
+    padding: 0 20px;
+}
+
+.text-primary {
+    color: green;
+    font-size: 23px;
+}
+
+.lead {
+  font-size: 20px;
+  color: red;
+}
+
+.btn {
+    display: inline-block;
+    font-size: 18px;
+    color: #fff;
+    background: #333;
+    padding: 9px 20px;
+    border: none;
+    transition-property: background;
+    transition-duration: 2s;
+}
+
+.btn:hover {
+    background: green;
+    color: #333;
+    border-radius: 10px;
+    transform: rotate(18deg);
+    transform: skew(8deg);
+    transform: skale(2);
+}
+
+.btn-light {
+    background: #f4f4f4;
+    color: #333;
+}
+
+.btn-read{
+    background: #f4f4f4;
+    padding-top: 15px;
+    color: #333;
+    width: 150px;
+    height: 50px;
+    animation-name: animate1;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-delay: 1s;
+    animation-direction: alternate-reverse;
+}
+
+@keyframes animate1 {
+    
+    to {
+        width: 400px;
+        background-color: rgb(0, 83, 122);
+    }
+}
+
+.bg-dark {
+    background: #333;
+    color: #fff;
+}
+
+.bg-light {
+    background: #f4f4f4;
+    color: #333;
+}
+
+.bg-primary {
+    background: orange;
+    color: #333;
+}
+
+.clr {
+    clear:both;
+}
+
+.l-heading {
+    font-size: 40px;
+    line-height: 1.2;
+}
+
+/* padding */
+
+
+/* navbar */
+#navbar {
+    background: #333;
+    color: white;
+}
+
+#navbar a {
+    color: white;
+}
+
+#navbar h1 {
+    float: left;
+    padding-top: 20px;
+}
+
+#navbar ul {
+    list-style: none;
+    float: right;
+}
+
+#navbar ul li {
+    float: left;
+}
+
+#navbar ul li a {
+    display: block;
+    padding: 20px;
+    text-align: center;
+}
+
+#navbar ul li a:hover,
+#navbar ul li a.current  {
+    background: #444;
+    color: orange;
+}
+
+/* drop down */
+#navbar ul li ul {
+    position: absolute;
+    display: none;
+    background-color: rgba(12, 32, 3, 0.726);
+    border-radius: 0px 0px 5px 5px;
+    line-height: 1;
+    width: 180px;
+    opacity: 0;
+
+}
+
+#navbar ul li ul ul {
+    position: absolute;
+    display: none;
+    background-color: rgba(12, 32, 3, 0.726);
+    border-radius: 0px 0px 5px 5px;
+    line-height: 1;
+    width: 150px;
+
+}
+.menu-wrap .toggler {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    cursor: pointer;  
+    width: 50px;
+    height: 50px;
+    opacity: 0;
+}
+
+
+.tony {
+    display: none;
+}
+
+.ani:hover .tony{
+    display: block;
+    position: absolute;
+    margin-top: -40px;
+    margin-left: 150px;
+}
+
+#navbar ul li:hover ul {
+    display: block;
+}
+
+/* drop down product */
+
+
+/* showcase */
+#showcase {
+    background: url(../image/brewe\ 1.jpg) no-repeat center center/cover;
+    height: 600px;
+    padding-top: 100px;
+}
+
+#showcase .showcase-content {
+    color:#fff ;
+    text-align: center;
+    padding-bottom: 100px;
+}
+
+#showcase .showcase-content h1 {
+    font-size: xx-large;    
+    line-height: 100px;
+    font-size: 50px;
+    color: green;
+    font-family: algerian;
+
+
+}
+
+#showcase .showcase-content p {
+    padding-bottom: 20px;
+    line-height: 1.7em;
+}
+
+.heading {
+    color: green;
+}
+
+/* animation */
+
+/* page animation */
+#showcase h1 {
+    transform: translateY(-1200px);
+    animation: heading var(--animate-speed) forwards ease-in;
+}
+#showcase p {
+    transform: translatex(-1800px);
+    animation: text var(--animate-speed) forwards ease-in 1s;
+}
+
+/* keyframes */
+@keyframes heading {
+    to {
+        transform: translateY(0); 
+    }
+}
+@keyframes text {
+    to {
+        transform: translateX(0); 
+    }
+}
+
+
+/* faster */
+.faster {
+    color: green;
+    padding: 120px;
+}
+
+
+.ksl {
+    color: green;
+}
+
+/* Home info */
+#home-info {
+    height: 400px;
+}
+
+#home-info .info-img {
+    float: left;
+    width: 50%;
+    background: url("../image/download\ \(8\).jfif") no-repeat center center/cover ;
+    height: 100%;
+}
+
+#home-info .info-content {
+    float: right;
+    width: 50%;
+    height: 100%;
+    text-align: center;
+    padding: 50px 30px;
+    overflow: hidden;
+}
+
+/* features */
+.box {
+    float: left;
+    width: 33.3%;
+    padding: 50px;
+    text-align: center;
+}
+
+.box i {
+    margin-bottom: 10px;
+}
+
+
+/* About info */
+#about-info .info-right {
+    float: right;
+    width: 50%;
+    min-height: 100%;
+}
+
+#about-info .info-right img {
+    display: block;
+    margin: auto;
+    width: 70%;
+    border-radius: 100%;
+}
+
+#about-info .info-left {
+    float: left;
+    width: 50%;
+    min-height: 100%;
+}
+
+/* Testimonials */
+#testimonials {
+    height: 100%;
+    background: url(../image/picture\ 5.png) no-repeat center center/cover;
+    padding-top: 100px;
+}
+
+#testimonials h2 {
+    color: #fff;
+    text-align: center;
+    padding-bottom: 40px;
+}
+
+#testimonials .testimonial {
+    padding: 20px;
+    margin-bottom: 40px;
+    border-radius: 5px;
+    opacity: 0.7;
+}
+
+#testimonials .testimonial img {
+    width: 100px;
+    float: left;
+    margin-right: 20px;
+    border-radius: 50%;
+}
+
+/* contact form */
+#contact-form .form-group {
+    margin-bottom: 20px;
+}
+
+#contact-form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+#contact-form input,
+ #contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px #111 solid;
+}
+
+#contact-form textarea {
+    height: 200px;
+}
+
+
+#contact-form input:focus,
+ #contact-form textarea:focus {
+    outline: none;
+    border-color: orange;
+ }
+
+/* footer */
+#main-footer {
+    text-align: center;
+    background: #555;
+    color: #fff;
+    padding: 20px;
+}
+
+/* Job Vacancy */
+.job{
+    text-align: center;
+} 
+
+/* images for product */
+#images-in-product {
+    padding-left: 50px;
+    padding-top: 50px;
+}
+.coke {
+    border-radius: 100px;
+    height: 10em;
+}
+
+/* product text */
+
+.coca {
+    color: red;
+    padding-left: 80px;
+}
+
+.champ {
+    padding-left: 700px;
+    color: blue;
+}
+.guin {
+    padding-left: 180px;
+    color: rgb(94, 18, 94);
+}
+.nigeria {
+    padding-left: 190px;
+    color: rgb(9, 1, 17);
+}
+.hero {
+    padding-left: 160px;
+    color: green;
+}
+
+/* drop down menu */
+:root {
+    --page-1-color:steelblue;
+    --page-2-color: tan;
+    --page-3-color: teal;
+    --page-4-color:slateblue;
+    --animate-speed: 2s;
+}
+:root {
+    --primary-color: rgba(13, 110, 139, 0.75);
+    --secondary-color: rgba(229, 148, 0, 0.9);
+    --ovarlay-color: rgba(24, 39, 51, 0.85);
+    --menu-speed: 0.75s;
+}
+
+
+
+.menu-wrap .hamburger {
+    background: #333;
+}
+

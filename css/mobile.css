@@ -1,0 +1,93 @@
+
+
+
+#navbar h1 {
+    text-align: center;
+    padding: 20px 120px ;
+}
+
+
+.lead {
+    font-size: 20px;
+    color: rgba(221, 3, 3, 0.644);
+  }
+
+
+#showcase .showcase-content h1 {   
+    line-height: 50px;
+    font-size: 35px;
+    color: green;
+    font-family: algerian;
+    
+
+}
+
+/* boxes */
+.box {
+    float: none;
+    width: 100%;
+}
+
+.heading {
+    color: green;
+    padding: 30px 30px 30px 30px;
+}
+
+/* About */
+#about-info .info-right,
+#about-info .info-left{
+    float: right;
+    width: 100%;
+}
+
+#about-info .info-right {
+    margin-top: 30px;
+}
+
+
+
+/* contact */
+#contact-info .box {
+    border-bottom: #444 dotted 3px;
+}
+
+/* About */
+.btn-read{
+    background: #f4f4f4;
+    padding-top: 15px;
+    color: #333;
+    width: 150px;
+    height: 50px;
+    animation-name: animate1;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-delay: 1s;
+    animation-direction: alternate-reverse;
+}
+
+@keyframes animate1 {
+    
+    to {
+        width: 100px;
+        background-color: steelblue;
+    }
+}
+
+/* contact */
+
+.text-primary {
+    color: green;
+    font-size: 23px;
+    padding-left: 50px;
+}
+
+/* images */
+
+.image-8, .image-7, .image-6, 
+.image-5, .image-4, .image-3, 
+.image-2, .image-1  {
+    border-radius: 50px;
+    border: 3px solid rgb(166, 255, 0);
+    width: 100%;
+}
+
