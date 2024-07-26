@@ -13,7 +13,11 @@
     <title>KSL Contact</title>
 </head>
 <body>
-    
+    <style>
+        body {
+            background-color: #fff;
+        }
+    </style>
     <header>
         <div class="menu-wrap">
             <nav id="navbar">
@@ -23,111 +27,209 @@
                     <div class="menu">
                         <div>
                             <div>
-                    <h1 class="logo"><a href="index.html"> <img src="./image/logo.jpg" alt="" class="logo"></a></h1>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="About.html">About</a>
-                        <ul>
-                            <li><a href="./about our com.html">About our company</a></li>
-                            <li><a href="./founder family.html"> The founder family </a></li>
-                            <li><a  href="./about_founder.html">About the founder</a></li>
-                        </ul>
-                        </li>
-                        <li class="produce"><a  href="product.html">Products</a>
-                        <div class="sub-menu-3" >
-                            <ul>
-                                <li><a href="./cocacola.html">CoCaCola</a></li>
-                                <li><a href="./guiness.html">Guiness</a></li>
-                                <li><a href="./champion.html">Champion</a></li>
-                                <li><a href="./nigeria_bewries.html">Nigeria Bewries</a></li>
-                                <li><a href="./hero.html">Hero</a></li>
-                            </ul>
+                                <h1 class="logo"><a href="index.html"><img src="./image/logo.jpg" alt="" class="logo"></a></h1>
+                                <ul>
+                                    <li><a href="index.html">Home</a></li>
+                                    <li><a href="About.html">About</a>
+                                        <ul>
+                                            <li><a href="./about our com.html">About our company</a></li>
+                                            <li><a href="./founder family.html">The founder family</a></li>
+                                            <li><a href="./about_founder.html">About the founder</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="produce"><a href="product.html">Products</a>
+                                        <div class="sub-menu-3">
+                                            <ul>
+                                                <li><a href="./cocacola.html">CoCaCola</a></li>
+                                                <li><a href="./guiness.html">Guiness</a></li>
+                                                <li><a href="./champion.html">Champion</a></li>
+                                                <li><a href="./nigeria_bewries.html">Nigeria Bewries</a></li>
+                                                <li><a href="./hero.html">Hero</a></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li><a href="galary.html">Galary</a></li>
+                                    <li><a href="job.html">Jobs</a></li>
+                                    <li><a href="contact.html">Contact</a></li>
+                                </ul>
+                            </div>
                         </div>
-                        </li>
-                        <li><a  href="galary.html">Galary</a></li>
-                        <li><a href="job.html">Jobs</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul> 
-                    </div>  
+                    </div>
                 </div>
-                </div>
-            </div>
-          </nav>
+            </nav>
         </div>
     </header>
 
-    <section id="contact-form" class="py-3">
-        <div class="container">
-            <h1 class="l-heading"><span class="text-primary">Contact</span> Us</h1>
-            <p>please fill out the form below to contact us</p>
-            <form action="process.php">
-                <div class="form-group">
-                    <label for="name">Type of the drinks</label>
-                    <input type="text" name="name" id="name" placeholder="Any Type">
+    <div class="container">
+        <form action="https://formspree.io/f/manwkjbo" method="POST" class="contact-left" id="order-form">
+            <h1>Drink Shop</h1>
+            <div class="drinks-list">
+                <!-- Example drink item, repeat for each drink -->
+                <div class="drink-item">
+                    <h2><img src="./image/logo.jpg" alt=""></h2>
+                    <p>Price: $1.50</p>
+                    <div class="quantity-control">
+                        <button class="minus" type="button" onclick="updateQuantity('coke', -1)">-</button>
+                        <input type="number" id="coke-quantity" value="0" readonly>
+                        <button class="plus" type="button" onclick="updateQuantity('coke', 1)">+</button>
+                    </div>
                 </div>
-                <div class="form-group">
-                    <label for="email">Number of drinks</label>
-                    <input type="email" email="email" id="email" placeholder="ANY NUMBER" >
+
+                <div class="drink-item">
+                    <h2><img src="./image/images (18).jfif" alt=""></h2>
+                    <p>Price: $2.00</p>
+                    <div class="quantity-control">
+                        <button class="minus" type="button" onclick="updateQuantity('life', -1)">-</button>
+                        <input type="number" id="life-quantity" value="0" readonly>
+                        <button class="plus" type="button" onclick="updateQuantity('life', 1)">+</button>
+                    </div>
                 </div>
-                <div class="form-group">
-                    <label for="complains">Complains</label>
-                    <textarea name="message" id="message"></textarea>
+                
+                <div class="drink-item">
+                    <h2><img src="./image/images (3).jfif" alt=""></h2>
+                    <p>Price: $2.00</p>
+                    <div class="quantity-control">
+                        <button class="minus" type="button" onclick="updateQuantity('can', -1)">-</button>
+                        <input type="number" id="can-quantity" value="0" readonly>
+                        <button class="plus" type="button" onclick="updateQuantity('can', 1)">+</button>
+                    </div>
                 </div>
-                <div>
-                    <label for="brand">What kind of brand</label>
-                    <select name="sex" id="sex">
-                <option value="select">Click To Select</option>
-              <option value="33">"33"</option>
-              <option value="coke">CoCaCola</option>
-              <option value="Life">Life</option>
-              <option value="Gulder">Gulder</option>
-              <option value="Hieneken">Hieneken</option>
-              <option value="Amstel">Amstel</option>
-              <option value="Tiger">Tiger</option>
-              <option value="Star">Star</option>
-              <option value="Champion">champion</option>
-              <option value="grand malt">grand malt</option>
-              <option value="Dubic malt">Dubic malt</option>
-              <option value="s/pets">s/pets</option>
-              <option value="B/pets">B/pets</option>
-              <option value="Amstel can">Amstel can</option>
-              <option value="small stout">small stout</option>
-              <option value="mid stout">mid stout</option>
-              <option value="Hero">Hero</option>
-              <option value="budwiser">budwiser</option>
-              <option value="Star radler">Star radler</option>
-              
-                    </select>
-                  </div>
-                <a href="thanks.html" target="_blank"><div type="submit" class="btn">Submit </div></a>
-            </form>
-        </div>
-    </section>
-    &nbsp;
-    
-    <section id="contact-info" class="bg-dark">
-        <div class="container">
-            <div class="box bg">
-                <div class="ware-house">
-                <h3>Location</h3>
-                <p>7 Rigbu Amba str Ikom, in cross river Nigeria</p>
+                
+                <div class="drink-item">
+                    <h2><img src="./image/images (1).jfif" alt=""></h2>
+                    <p>Price: $2.00</p>
+                    <div class="quantity-control">
+                        <button class="minus" type="button" onclick="updateQuantity('canhero', -1)">-</button>
+                        <input type="number" id="canhero-quantity" value="0" readonly>
+                        <button class="plus" type="button" onclick="updateQuantity('canhero', 1)">+</button>
+                    </div>
+                </div>
+                
+                <div class="drink-item">
+                    <h2><img src="./image/images (20).jfif" alt=""></h2>
+                    <p>Price: $2.00</p>
+                    <div class="quantity-control">
+                        <button class="minus" type="button" onclick="updateQuantity('BottleGuiness', -1)">-</button>
+                        <input type="number" id="BottleGuiness-quantity" value="0" readonly>
+                        <button class="plus" type="button" onclick="updateQuantity('BottleGuiness', 1)">+</button>
+                    </div>
+                </div>
+                
+                <div class="drink-item">
+                    <h2><img src="./image/images (34).jfif" alt=""></h2>
+                    <p>Price: $2.00</p>
+                    <div class="quantity-control">
+                        <button class="minus" type="button" onclick="updateQuantity('Desperado', -1)">-</button>
+                        <input type="number" id="Desperado-quantity" value="0" readonly>
+                        <button class="plus" type="button" onclick="updateQuantity('Desperado', 1)">+</button>
+                    </div>
+                </div>
+                
+                <div class="drink-item">
+                    <h2><img src="./image/images (26).jfif" alt=""></h2>
+                    <p>Price: $2.00</p>
+                    <div class="quantity-control">
+                        <button class="minus" type="button" onclick="updateQuantity('GuinessBottle', -1)">-</button>
+                        <input type="number" id="GuinessBottle-quantity" value="0" readonly>
+                        <button class="plus" type="button" onclick="updateQuantity('GuinessBottle', 1)">+</button>
+                    </div>
+                </div>
+                
+                <div class="drink-item">
+                    <h2><img src="./image/champion3.jfif" alt=""></h2>
+                    <p>Price: $2.00</p>
+                    <div class="quantity-control">
+                        <button class="minus" type="button" onclick="updateQuantity('Champion', -1)">-</button>
+                        <input type="number" id="Champion-quantity" value="0" readonly>
+                        <button class="plus" type="button" onclick="updateQuantity('Champion', 1)">+</button>
+                    </div>
+                </div>
+                
+                <div class="drink-item">
+                    <h2><img src="./image/download (15).jfif" alt=""></h2>
+                    <p>Price: $2.00</p>
+                    <div class="quantity-control">
+                        <button class="minus" type="button" onclick="updateQuantity('PlasticCoke', -1)">-</button>
+                        <input type="number" id="PlasticCoke-quantity" value="0" readonly>
+                        <button class="plus" type="button" onclick="updateQuantity('PlasticCoke', 1)">+</button>
+                    </div>
+                </div>
+                
+                <div class="drink-item">
+                    <h2><img src="./image/images (35).jfif" alt=""></h2>
+                    <p>Price: $2.00</p>
+                    <div class="quantity-control">
+                        <button class="minus" type="button" onclick="updateQuantity('Heineken', -1)">-</button>
+                        <input type="number" id="Heineken-quantity" value="0" readonly>
+                        <button class="plus" type="button" onclick="updateQuantity('Heineken', 1)">+</button>
+                    </div>
+                </div>
+                
+                <div class="drink-item">
+                    <h2><img src="./image/images (36).jfif" alt=""></h2>
+                    <p>Price: $2.00</p>
+                    <div class="quantity-control">
+                        <button class="minus" type="button" onclick="updateQuantity('Zagg', -1)">-</button>
+                        <input type="number" id="Zagg-quantity" value="0" readonly>
+                        <button class="plus" type="button" onclick="updateQuantity('Zagg', 1)">+</button>
+                    </div>
+                </div>
+                
+                <div class="drink-item">
+                    <h2><img src="./image/images (24).jfif" alt=""></h2>
+                    <p>Price: $2.00</p>
+                    <div class="quantity-control">
+                        <button class="minus" type="button" onclick="updateQuantity('Guiness', -1)">-</button>
+                        <input type="number" id="Guiness-quantity" value="0" readonly>
+                        <button class="plus" type="button" onclick="updateQuantity('Guiness', 1)">+</button>
+                    </div>
+                </div>
+                
+                <div class="drink-item">
+                    <h2><img src="./image/images (38).jfif" alt=""></h2>
+                    <p>Price: $2.00</p>
+                    <div class="quantity-control">
+                        <button class="minus" type="button" onclick="updateQuantity('Coke', -1)">-</button>
+                        <input type="number" id="Coke-quantity" value="0" readonly>
+                        <button class="plus" type="button" onclick="updateQuantity('Coke', 1)">+</button>
+                    </div>
+                </div>
+                
+                <div class="drink-item">
+                    <h2><img src="./image/download (20).jfif" alt=""></h2>
+                    <p>Price: $2.00</p>
+                    <div class="quantity-control">
+                        <button class="minus" type="button" onclick="updateQuantity('Star', -1)">-</button>
+                        <input type="number" id="Star-quantity" value="0" readonly>
+                        <button class="plus" type="button" onclick="updateQuantity('Star', 1)">+</button>
+                    </div>
+                </div>
+                
+                
+
+                <!-- Add other drinks similarly -->
+
             </div>
+
+            <!-- Cart Summary at the top-right corner -->
+            <div class="cart-summary" id="cart-summary">
+                <h3>Your Cart</h3>
+                <ul id="cart-items">
+                    <!-- List of selected items -->
+                </ul>
+                <p id="total-amount">Total: $0.00</p>
+                <button type="submit" onclick="submitOrder()">Submit</button>
             </div>
-            <div class="box  bg">
-                <h3>phone number</h3>
-                <p>Director: 08039395495</p>
-                <p>Manager: 08138858456</p>
-                <p>Website Manager: 09153359742</p>
-            </div>
-            <div class="box bg">
-                <h3>Email address</h3>
-                <p>kechen-sons@gmail.com</p>
-            </div>
-        </div>
-    </section>
+
+            <!-- Hidden field for order summary -->
+            <input type="hidden" name="order-summary" id="order-summary">
+
+        </form>
+    </div>
 
     <footer id="main-footer">
         <p>Kechen & Sons &copy; 2024, All Rights Reserve</p>
     </footer>
+    <script src="./java/index.js"></script>
 </body>
 </html>

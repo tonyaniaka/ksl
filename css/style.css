@@ -228,7 +228,7 @@ p {
 }
 
 body {
-   background-color:#333;
+   background-color: #333;
 }
 
 @keyframes slideshow {
@@ -482,9 +482,74 @@ body {
     --menu-speed: 0.75s;
 }
 
-
-
 .menu-wrap .hamburger {
     background: #333;
 }
 
+/* contact */
+
+
+
+.drink-item {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px 0;
+    justify-content: space-between;
+    float: left;
+}
+
+.quantity-control {
+    align-items: center;
+}
+
+.quantity-control button {
+    width: 30px;
+    height: 30px;
+}
+
+.quantity-control input {
+    width: 50x;
+    text-align: center;
+    margin: 0 5px;
+}
+
+.cart-summary {
+    position: fixed;
+    top: 90px;
+    right: 20px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    background-color: #f9f9f9;
+}
+
+.cart-summary ul {
+    list-style: none;
+    padding: 0;
+}
+
+.cart-summary button {
+    margin-top: 10px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.c{
+   font-size: 100px;
+   text-align: center;
+   margin-top: 100px;
+}
+h1{
+    text-align: center;
+}
+
+@media (max-width:800px){
+    .drink-item{
+       margin-left: 80px;
+    }
+}
+@media (min-width: 1100px){
+    .drink-item{
+       height: 440px;
+       border: #ccc solid 1px;
+    }
+}

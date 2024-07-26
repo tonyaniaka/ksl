@@ -126,7 +126,7 @@
     position: fixed;
     visibility: hidden;
     overflow: hidden;
-    padding-top: 40px;
+    padding-top: 0px;
 }
 
 .menu-wrap .menu > div {
@@ -156,3 +156,4 @@
     width: 100%;
     position: relative;
 } 
+
