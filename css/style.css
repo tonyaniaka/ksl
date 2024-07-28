@@ -18,6 +18,7 @@
 html, body {
     font-family: Arial, Helvetica, sans-serif;
     line-height: 1.7em;
+    
 }
 
 a {
@@ -33,6 +34,11 @@ p {
     margin: 10px 0;
 }
 
+.logo {
+    height: 40px;
+    width: 32px;
+}
+
 /* Utility classes */
 .container {
     margin: auto;
@@ -44,6 +50,7 @@ p {
 .text-primary {
     color: green;
     font-size: 23px;
+    
 }
 
 .lead {
@@ -216,7 +223,32 @@ p {
     background: url(../image/brewe\ 1.jpg) no-repeat center center/cover;
     height: 600px;
     padding-top: 100px;
+    z-index: -1; /* Ensures it stays behind content */
+    animation: slideshow 20s infinite; /* Adjust timing as needed */
 }
+
+body {
+   background-color:#333;
+}
+
+@keyframes slideshow {
+    0% {
+      opacity: 0;
+    }
+    20% {
+      opacity: 50;
+    }
+    33% {
+      background-image: url('../image/2nd\ background.jpg');
+    }
+    53% {
+      background-image: url('../image/download.jfif');
+    }
+    
+    100% {
+      opacity: 0;
+    }
+  }
 
 #showcase .showcase-content {
     color:#fff ;
