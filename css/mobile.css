@@ -89,3 +89,169 @@
     width: 100%;
 }
 
+
+/* contact */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+  }
+  
+ 
+  .top-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  #basket-icon {
+    cursor: pointer;
+    background-color: #d52d2d;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 20px;
+    margin-left: 89%;
+  }
+  
+  main {
+    padding: 20px;
+  }
+  
+  .product-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .product-item {
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 5px rgba(0,0,0,0.1);
+    width: 100%;
+    text-align: center;
+  }
+  
+  .product-item img {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .product-details {
+    margin-top: 10px;
+  }
+  
+  .product-details h3 {
+    margin: 5px 0;
+  }
+  
+  .product-details .price {
+    color: #d52d2d;
+    font-weight: bold;
+  }
+  
+  .product-details button {
+    background-color: #d52d2d;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+  }
+  
+  #basket-panel {
+    position: fixed;
+    top: 0;
+    right: -0%;
+    width: 80%;
+    height: 100%;
+    background-color: #fff;
+    box-shadow: -2px 0 5px rgba(0,0,0,0.2);
+    padding: 20px;
+    transform: translateX(100%);
+    transition: transform 0.4s ease-in-out;
+    overflow-y: auto;
+    z-index: 1000;
+  }
+  
+  #basket-panel.show {
+    transform: translateX(0);
+  }
+  
+  .basket-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .basket-header h2 {
+    margin: 0;
+  }
+  
+  .close-btn {
+    background-color: transparent;
+    border: none;
+    font-size: 1.5em;
+    cursor: pointer;
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  #basket-items li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .drink-details {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .drink-price {
+    font-weight: bold;
+  }
+  
+  .quantity-controls {
+    display: flex;
+    align-items: center;
+  }
+  
+  .quantity-controls button {
+    background-color: #ccc;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+  
+  .checkout-btn {
+    background-color: #d52d2d;
+    color: white;
+    border: none;
+    width: 100%;
+    padding: 15px;
+    font-size: 1.2em;
+    cursor: pointer;
+    margin-top: 20px;
+    border-radius: 5px;
+  }
+
+@media (max-width: 768px){
+    #basket-icon {
+        cursor: pointer;
+        background-color: #d52d2d;
+        color: white;
+        padding: 10px 20px;
+        border-radius: 20px;
+        margin-left: 77.5%;
+      }
+}
+
